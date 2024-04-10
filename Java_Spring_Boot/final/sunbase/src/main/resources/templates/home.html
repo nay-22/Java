@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer Management System</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<!-- <div class="container my-2">
+		<h1>Customer Management System</h1>
+		<hr>
+		<h2>Login</h2>
+        <div class="container my-2">
+
+        </div>
+		<form action="#" th:action="@{/auth}" th:object="${creds}"
+			method="POST">
+			<input type="email" th:field="*{login_id}"
+				placeholder="Login ID" class="form-control mb-4 col-4">
+				
+				<input type="test" th:field="*{password}"
+				placeholder="Password" class="form-control mb-4 col-4">
+				
+				<button type="submit" class="btn btn-success col-3">Login</button>
+		</form>
+		
+		<hr>
+	</div> -->
+    <div class="container my-2">
+        <h1>Customer List</h1><br>
+        <a th:href="@{/showNewEmployeeForm}" class="btn btn-outline-danger btn-sm mb-3">Add Customer</a>
+        <table border="1" class = "table table-striped table-responsive-md">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <!-- <th> Actions </th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="customer : ${listCustomers}">
+                    <td th:text="${customer.first_name}"></td>
+                    <td th:text="${customer.last_name}"></td>
+                    <td th:text="${customer.email}"></td>
+                    <!-- <td style> 
+                        <div style="display: flex; justify-content: space-evenly;">
+                            <a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary">Update</a>
+                            <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>    
+                        </div>
+					</td> -->
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>

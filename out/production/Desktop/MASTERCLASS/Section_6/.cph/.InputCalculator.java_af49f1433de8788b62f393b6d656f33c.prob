@@ -1,0 +1,1 @@
+{"name":"Local: InputCalculator","url":"c:\\Users\\nayan\\OneDrive\\Desktop\\Java\\Section_6\\InputCalculator.java","tests":[{"id":1670486706193,"input":"3\n3\n3\ng","output":"SUM = 9 AVG = 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\nayan\\OneDrive\\Desktop\\Java\\Section_6\\InputCalculator.java","group":"local","local":true}
